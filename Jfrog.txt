@@ -1,0 +1,19 @@
+How To Install the Jfrog in the EC2-Instance:-
+1.Launch the EC2 with the Instance type t2.medium.
+2.Select all the Traffic And Add the traffics in the rule bound.
+3.Launch the instance.
+4.sudo su -
+5.wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/[RELEASE]/jfrog-artifactory-oss-[RELEASE]-linux.tar.gz?_gl=1*1li7shh*_ga*NDE5NTQ4Mzk4LjE2NTc3OTg1NTM.*_ga_SQ1NR9VTFJ*MTY1Nzg3NzAzNi40LjEuMTY1Nzg3NzA4NS4xMQ
+6.ls 
+7.tar -zvxf <path of tar file>
+8.ls
+9.cd artifactorty.
+10.ls
+11.cd app/
+12.ls
+13.cd bin/
+14.ls
+15. type:- ./artifactoryctl
+16. copy the Public Ip Address and paste the ip in the browser along with port no :8082 
+17.username:admin
+18.Password:password
