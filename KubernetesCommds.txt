@@ -1,0 +1,112 @@
+vi k-install.sh
+    2  sh k-install.sh
+    3  cd
+    4  vi k-install.sh
+    5  sh k-install.sh
+    6  sudo kubeadm init
+    7  kubectl get nodes
+    8  kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+    9  kubectl get nodes
+   10  cd /etc/kubernetes/manifests/
+   11  11
+   12  ll
+   13  sudu vi kube-controller-manager.yaml
+   14  sudo vi kube-controller-manager.yaml
+   15  sudo vi kube-apiserver.yaml
+   16  vi pod.yml
+   17  cd ..
+   18  vi pod.yml
+   19  kubectl apply -f pod.yml
+   20  cd
+   21  vi pod.yml
+   22  kubectl apply -f pod.yml
+   23  kubectl get nodes
+   24  kubectl get pods
+   25  kubectl describe pod qspider.pod
+   26  kubectl get nodes
+   27  kubectl describe nodes ip-172-31-35-25
+   28  kubectl describe nodes ip-172-31-35-89
+   29  kubectl get pods
+   30  ls
+   31  kubectl delete -f  qspider.pod
+   32  kubectl delete -f pod.yml
+   33  kubectl delete pod qspider.pod
+   34  ls
+   35  kubectl delete pods qspider.pod
+   36  kubectl delete pod qspider.pod
+   37  vi pod2.yml
+   38  kubectl apply -f pod2.yml
+   39  kubectl get pods
+   40  kubectl describe pod skillrary
+   41  kubectl logs -f skillrary -c babalo
+   42  kubectl exec skillrary -it -c  babalo -- /bin/bash
+   43  vi pod3.yml
+   44  kubectl apply -f pod3.yml
+   45  vi pod3.yml
+   46  kubectl apply -f pod3.yml
+   47  kubectl get pods
+   48  kubectl get pods -o wide
+   49  curl 10.32.0.3:80
+   50  kubectl delete pod skillrary
+   51  kubectl get pods
+   52  vi pod4.yml
+   53  kubectl apply -f pod4.yml
+   54  kubectl get pods
+   55  vi label.yml
+   56  kubectl apply -f label.yml
+   57  vi label.yml
+   58  kubectl apply -f label.yml
+   59  kubectl get pods --show-labels
+   60  kubectl label pod skillrary actress=anadearmas
+   61  kubectl get pods --show-labels
+   62  kubectl get pods
+   63  vi pod5.yml
+   64  kubectl apply -f pod5.yml
+   65  vi pod5.yml
+   66  kubectl apply -f pod5.yml
+   67  kubectl get pods
+   68  kubectl get pods --show-labels
+   69  kubectl describe pod skillrary
+   70  kubectl delete -f skillrary skill
+   71  kubectl delete pod skillrary skill
+   72  ls
+   73  kubectl get pod
+   74  vi pod6.yml
+   75  kubectl apply -f pod6.yml
+   76  vi pod7.yml
+   77  kubectl apply -f pod7.yml
+   78  kubectl get pod
+   79  kubectl get pod --show-labels
+   80  kubectl delete pod testpod
+   81  kubectl get pod --show-labels
+   82  vi pod8.yml
+   83  kubectl apply -f pod8.yml
+   84*
+   85  kubectl label pod jspider.pod nginx department=tester
+   86  kubectl label pod selenium python department=developer
+   87  kubectl get pod --show-labels
+   88  kubectl label pod selenium python department=devops
+   89* kubectl label pod selenium pyt department=devops
+   90  kubectl get pod --show-labels
+   91  vi pod8.yml
+   92  kubectl get pod --show-labels
+   93  kubectl label python selenium bar-
+   94  kubctl get pods -l departments=devops
+   95  kubectl get pods -l departments=devops
+   96  kubectl get pods -l departments!=devops
+   97  kubectl delete pods -l departments=devops
+   98  kubectl get pod --show-labels
+   99  vi pod8.yml
+  100  kubectl apply -f pod8.yml
+  101  ls
+  102  kubectl apply -f pod7.yml
+  103  kubectl get pod --show-labels
+  104  kubectl label python selenium department=devops
+  105  kubectl label selenium department=devops
+  106  kubectl get pod --show-labels
+  107  kubectl label pod jspider.pod department-
+  108  kubectl get pod --show-labels
+  109  kubectl label pod nginx department-
+  110  kubectl get pod --show-labels
+  111  ls
+  112  kubectl delete pod pod5.yml
